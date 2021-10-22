@@ -16,10 +16,10 @@ const alizarin = '#e74c3c',
 
   return (
     <div className="App">
-      <sidebar>
+      <aside>
       <h3>Zadanie 5. Przygotuj menu nawigacyjne</h3>
         <Menu/>
-      </sidebar>
+      </aside>
       <main>
         <div style={styles}>
           <h3>Zadanie 1, 2 i 3. Modyfikowalny button, Input i Textarea</h3>
