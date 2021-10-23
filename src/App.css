@@ -1,21 +1,50 @@
-.App {
-  display: flex;
-  min-height: 100vh;
-  background: #bdc3c7;
-  width: 100%;
+/* defalut */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.App sidebar, .App main {
+html {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* App styling */
+
+.App {
+  display: grid;
+  grid-template-columns: 200px repeat(12, 1fr);
+  min-height: 100vh;
+  background: #bdc3c7;
+}
+h3 {
+  color: #061A4E;
+  margin-left: 10px;
+}
+/* grid */
+.App aside, .App main {
   padding: 20px;
 }
 
+.App main {
+ grid-column: 2 / span 12;
+}
+
+/* Menu - header */
+
 .App aside {
   top: 0;
-  width: 20%;
-  height: 100vh;
   background-color: #212329;
   color: #60DAFB;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .Menu ul {
@@ -23,17 +52,15 @@
   padding-inline-start: 0;
 }
 
-.MenuLink {
-  color: #60DAFB;
-  padding: 10px 0;
+.Menu ul li a {
+  color: #60DAFB!important;
   text-decoration: none;
   display: block;
+  padding: 10px 0;
+  font-weight: bold;
 }
 
-.App main {
-  width: 80%;
-}
-
+/* Week3 styles */
 
 .Card {
   max-width: 400px;
@@ -109,6 +136,7 @@
 .Menu {
   display: block;
 }
+
 /* table reset */
 table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
@@ -123,10 +151,9 @@ table {
   border-spacing: 0;
 }
 
-
 .Employees {
-  width: 600px;
   table-layout: fixed;
+  width: 100%;
 }
 table {
   border-collapse: collapse;

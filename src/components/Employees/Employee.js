@@ -14,7 +14,7 @@ export function Employee ({ employee }) {
         {name}
       </td>
       <td>
-        {!isCollapsed ? <Info info={employee} /> : ""}
+        {!isCollapsed ? <Info info={employee} /> : " "}
       </td>
     </tr>
   );
