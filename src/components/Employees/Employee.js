@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Info } from "./Info";
 
-export function Employee ({ employee }) {
+export function Employee({ employee }) {
   const { name } = employee;
   const [isCollapsed, setIsCollapsed] = useState(true);
   const handleOnClick = () => {
@@ -10,12 +10,8 @@ export function Employee ({ employee }) {
 
   return (
     <tr>
-      <td onClick={handleOnClick}>
-        {name}
-      </td>
-      <td>
-        {!isCollapsed ? <Info info={employee} /> : " "}
-      </td>
+      <td onClick={handleOnClick}>{name}</td>
+      <td>{!isCollapsed ? <Info info={employee} /> : " "}</td>
     </tr>
   );
 }

@@ -1,3 +1,3 @@
-const Date = ({ date }) => <p className="Date">{ date }</p>;
+const Date = ({ date }) => <p className="Date">{date}</p>;
 
 export default Date;

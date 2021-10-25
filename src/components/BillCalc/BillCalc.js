@@ -13,4 +13,4 @@ function BillCalc() {
   );
 }
 
-export default BillCalc
+export default BillCalc;

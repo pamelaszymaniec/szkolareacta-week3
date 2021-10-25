@@ -6,7 +6,6 @@ import Week3 from "./pages/Week3";
 import Week4 from "./pages/Week4";
 import BudgetCalc from "./pages/BudgetCalc";
 
-
 import "./App.css";
 import Logo from "./components/Header/Logo";
 
@@ -51,6 +50,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;

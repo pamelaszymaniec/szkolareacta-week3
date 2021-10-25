@@ -1,15 +1,16 @@
-function MenuLink({to, children, isActive}) {
+function MenuLink({ to, children, isActive }) {
+  const activeStyles = {
+    textDecoration: "underline",
+    color: "#e74c3c",
+  };
 
-    const activeStyles = {
-        textDecoration: 'underline',
-        color: '#e74c3c'
-    };
-
-    return (
+  return (
     <li>
-        <a style={isActive ? activeStyles : null} className="MenuLink" href={to}>{children}</a>
+      <a style={isActive ? activeStyles : null} className="MenuLink" href={to}>
+        {children}
+      </a>
     </li>
-    )
+  );
 }
 
 export default MenuLink;

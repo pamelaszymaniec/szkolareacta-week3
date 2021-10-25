@@ -3,8 +3,8 @@ import { forwardRef } from "react";
 export const RefButton = forwardRef(({ text, handleMouseOver }, ref) => {
   const style = {
     padding: 20,
-    backgroundColor: '#ebebeb',
-    margin: 20
+    backgroundColor: "#ebebeb",
+    margin: 20,
   };
   return (
     <>

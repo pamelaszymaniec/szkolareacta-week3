@@ -1,3 +1,3 @@
-const Excerpt = ({children}) => <p className="Paragraph"> {children} </p>
+const Excerpt = ({ children }) => <p className="Paragraph"> {children} </p>;
 
 export default Excerpt;

@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 import BillCalc from "../components/BillCalc/BillCalc";
-import {RefButton} from "../components/RefButton/RefButton"
+import { RefButton } from "../components/RefButton/RefButton";
 import ReactHookForm from "../components/ValidationForm/ReactHookForm";
 import ValidationForm from "../components/ValidationForm/ValidationForm";
 
@@ -8,8 +8,8 @@ function Week4() {
   const ref = createRef();
   const handleMouseOver = () => {
     const currentButton = ref.current;
-    currentButton.style.background="#f00";
-  }
+    currentButton.style.background = "#f00";
+  };
   return (
     <>
       <h1>Tydzień 4. Zdarzenia, Refy, Bindowanie</h1>
@@ -21,7 +21,11 @@ function Week4() {
       <h2>4. Kalkulator wydatków</h2>
       <a href="/budgetcalc">tutaj</a>
       <h2>5. Zadanie 5 (button)</h2>
-      <RefButton ref={ref} text="Hello, hover me!" handleMouseOver={handleMouseOver}/>
+      <RefButton
+        ref={ref}
+        text="Hello, hover me!"
+        handleMouseOver={handleMouseOver}
+      />
     </>
   );
 }

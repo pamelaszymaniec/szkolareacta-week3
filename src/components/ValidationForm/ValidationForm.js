@@ -38,16 +38,16 @@ const useForm = (callback, validate) => {
     const validationCheck = validate(values, checkboxes);
     setIsSubmitting(true);
     //reset
-    if(Object.keys(validationCheck).length === 0)  {
+    if (Object.keys(validationCheck).length === 0) {
       setValues({
         name: "",
         email: "",
         bio: "",
         gender: "",
-      })
+      });
       setCheckboxes({
-        terms: false
-      })
+        terms: false,
+      });
     }
   };
 
@@ -55,7 +55,7 @@ const useForm = (callback, validate) => {
     if (isSubmitting && Object.keys(errors).length === 0) {
       callback();
     }
-  },);
+  });
 
   return { handleChange, values, handleSubmit, errors, checkboxes };
 };

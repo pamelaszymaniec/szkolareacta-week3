@@ -2,7 +2,7 @@ import { MdDelete } from "react-icons/md";
 import "./budget.scss";
 
 const BudgetItem = ({ item, handleDelete, type }) => {
-  const { title, amount, category, id} = item;
+  const { title, amount, category, id } = item;
   return (
     <li className="budget__item">
       <div className="title">

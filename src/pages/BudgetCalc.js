@@ -1,6 +1,5 @@
 import BudgetCalc from "../components/BudgetCalc/BudgetCalc";
 
-
 function App() {
   return (
     <>

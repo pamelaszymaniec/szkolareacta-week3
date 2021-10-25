@@ -72,7 +72,7 @@ const BudgetCalc = () => {
     } else {
       let tempIncomesTable = incomes.filter((item) => item.id !== id);
       setIncomes(tempIncomesTable);
-       // setIncomes([...incomes.filter((item) => item.id !== id)])
+      // setIncomes([...incomes.filter((item) => item.id !== id)])
     }
   };
 
@@ -138,7 +138,7 @@ const BudgetCalc = () => {
           clearItems={clearItems}
         />
       </div>
-      <hr/>
+      <hr />
       <div className="total">
         Total:
         <strong className={totalBudget() > 0 ? "plus" : "minus"}>

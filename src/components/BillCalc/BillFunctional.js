@@ -15,7 +15,6 @@ function BillFunctional() {
     setSelectedTip(e.target.value);
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const billGross = parseFloat(amount) + (parseFloat(amount) * 25) / 100;
@@ -38,7 +37,7 @@ function BillFunctional() {
           <p>
             <strong>Napiwek:</strong>
             {((parseFloat(amount) * 25) / 100 + parseFloat(amount)) *
-                (parseFloat(selectedTip) / 100)}
+              (parseFloat(selectedTip) / 100)}
             PLN
           </p>
           <p>
@@ -67,9 +66,7 @@ function BillFunctional() {
               ))}
             </select>
           </div>
-          <button type="submit">
-            Przelicz
-          </button>
+          <button type="submit">Przelicz</button>
         </form>
       )}
     </>

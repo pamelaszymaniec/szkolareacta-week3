@@ -4,7 +4,7 @@ function SingleForm({
   handleSubmit,
   errors,
   checkboxes,
-  disabled
+  disabled,
 }) {
   return (
     <form onSubmit={handleSubmit}>
@@ -49,9 +49,23 @@ function SingleForm({
       >
         {errors.gender && <span className="error">{errors.gender}</span>}
         <label htmlFor="gender">Wybierz płeć:</label>
-        <input type="radio" id="male" name="gender" value="female" checked={values.gender === 'female'}  onChange={handleChange} />
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="female"
+          checked={values.gender === "female"}
+          onChange={handleChange}
+        />
         <span>Kobieta</span>
-        <input type="radio" id="female" name="gender" value="male" checked={values.gender === 'male'}  onChange={handleChange}/>
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="male"
+          checked={values.gender === "male"}
+          onChange={handleChange}
+        />
         <span>Mężczyzna</span>
       </div>
 
@@ -67,7 +81,9 @@ function SingleForm({
         />
         <label htmlFor="terms">Akceptuję regulamin</label>
       </div>
-      <button type="submit" disabled={disabled}>Wyślij</button>
+      <button type="submit" disabled={disabled}>
+        Wyślij
+      </button>
     </form>
   );
 }

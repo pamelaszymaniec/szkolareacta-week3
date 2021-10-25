@@ -15,23 +15,35 @@ function ReactHookForm() {
     register,
     handleSubmit,
     formState: { errors, isSubmitted, isValid },
-    reset
+    reset,
   } = useForm({ mode: "all" });
 
   const onSubmit = () => {
     reset();
-  }
+  };
 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <p>{errors.name && <span style={styles.errorMsg}>To pole nie moze byc puste</span>}</p>
+          <p>
+            {errors.name && (
+              <span style={styles.errorMsg}>To pole nie moze byc puste</span>
+            )}
+          </p>
           <label htmlFor="name">Imię:</label>
-          <input style={errors.name && styles.error} type="text" {...register("name", { required: true })} />
+          <input
+            style={errors.name && styles.error}
+            type="text"
+            {...register("name", { required: true })}
+          />
         </div>
         <div>
-        <p>{errors.email && <span style={styles.errorMsg}>To pole nie moze byc puste</span>}</p>
+          <p>
+            {errors.email && (
+              <span style={styles.errorMsg}>To pole nie moze byc puste</span>
+            )}
+          </p>
           <label htmlFor="name">Adres e-mail:</label>
           <input
             type="email"
@@ -41,7 +53,11 @@ function ReactHookForm() {
           />
         </div>
         <div>
-        <p>{errors.bio && <span style={styles.errorMsg}>To pole nie moze byc puste.</span>}</p>
+          <p>
+            {errors.bio && (
+              <span style={styles.errorMsg}>To pole nie moze byc puste.</span>
+            )}
+          </p>
           <label htmlFor="bio">Krótkie bio:</label>
           <textarea
             rows="4"
@@ -52,7 +68,9 @@ function ReactHookForm() {
           ></textarea>
         </div>
         <div>
-        <p>{errors.gender && <span style={styles.errorMsg}>Wybierz płeć</span>}</p>
+          <p>
+            {errors.gender && <span style={styles.errorMsg}>Wybierz płeć</span>}
+          </p>
           <label htmlFor="gender">Wybierz płeć:</label>
           <input
             type="radio"
@@ -68,7 +86,11 @@ function ReactHookForm() {
           <span>Mężczyzna</span>
         </div>
         <div>
-        <p>{errors.terms && <span style={styles.errorMsg}>Zaakceptuj regulamin.</span>}</p>
+          <p>
+            {errors.terms && (
+              <span style={styles.errorMsg}>Zaakceptuj regulamin.</span>
+            )}
+          </p>
           <input
             type="checkbox"
             {...register("terms", { required: true })}

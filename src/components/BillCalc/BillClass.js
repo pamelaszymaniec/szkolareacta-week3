@@ -46,7 +46,8 @@ class BillClass extends React.Component {
               PLN
             </p>
             <p>
-              <strong>Całkowita kwota (kwota brutto + napiwek):</strong> {bill} PLN
+              <strong>Całkowita kwota (kwota brutto + napiwek):</strong> {bill}{" "}
+              PLN
             </p>
           </div>
         ) : (
