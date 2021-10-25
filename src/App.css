@@ -175,3 +175,8 @@ tr:hover {
   background: #d1d1d1;
 }
 
+.error {
+  font-size: 13px;
+  color: #f00;
+  display: block;
+}

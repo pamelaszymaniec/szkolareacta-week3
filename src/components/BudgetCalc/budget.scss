@@ -1,0 +1,132 @@
+// COLORS
+$color-primary: #55c57a;
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+
+//reset button
+.delete-icon,
+.button-reset {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+
+.form {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  &__group {
+    padding-right: 20px;
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: block;
+    transition: all 0.3s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &__radio-group {
+    display: inline-block;
+  }
+
+  &__radio-label {
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+  }
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #5643fa;
+  color: #fff;
+  padding: 11px 30px;
+  border-radius: 2px;
+}
+
+.budget {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 20px;
+  &__list {
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+    }
+  }
+  &__item {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .title {
+      & > * {
+        display: block;
+      }
+    }
+  }
+}
+
+.total {
+  text-align: center;
+  align-self: center;
+  font-size: 30px;
+}
+.plus {
+  color: #55c57a;
+}
+.minus {
+  color: #f00;
+}

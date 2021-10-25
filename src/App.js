@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Week3 from "./pages/Week3";
 import Week4 from "./pages/Week4";
+import BudgetCalc from "./pages/BudgetCalc";
+
 
 import "./App.css";
 import Logo from "./components/Header/Logo";
@@ -24,6 +26,9 @@ function App() {
             <li>
               <Link to="/week4">Tydzień 4</Link>
             </li>
+            <li>
+              <Link to="/budgetcalc">Kalkulator wydatków</Link>
+            </li>
           </ul>
         </aside>
         <main>
@@ -33,6 +38,9 @@ function App() {
             </Route>
             <Route path="/week4">
               <Week4 />
+            </Route>
+            <Route path="/budgetcalc">
+              <BudgetCalc />
             </Route>
             <Route path="/">
               <Home />
