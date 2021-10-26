@@ -18,16 +18,23 @@ class BillClass extends React.Component {
     this.setState({ bill: billTotal, isSubmit: true });
   };
 
+  componentDidMount() {
+    const {tips} = this.state;
+    this.setState({selectedTip: tips[0]})
+  }
+
   handleChange = (e) => {
+    console.log(e.target.value)
     this.setState({ amount: e.target.value });
   };
 
   handleSelect = (e) => {
+    console.log(e.target.value)
     this.setState({ selectedTip: e.target.value });
   };
 
   render() {
-    const { tips, amount, selectedTip, bill, isSubmit } = this.state;
+    const { tips, defaultTip, selectedTip, amount,  bill, isSubmit } = this.state;
     return (
       <>
         {isSubmit ? (
@@ -63,7 +70,7 @@ class BillClass extends React.Component {
             </div>
             <div>
               <label htmlFor="tip">Wybierz wielkość napiwku:</label>
-              <select onChange={this.handleSelect} id="tip" name="tips">
+              <select onChange={this.handleSelect} value={selectedTip} id="tip" name="tips">
                 {tips.map((tip) => (
                   <option key={tip} value={tip}>
                     {tip} %
