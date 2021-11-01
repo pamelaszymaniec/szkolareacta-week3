@@ -31,7 +31,7 @@ const initialExpenses = localStorage.getItem("expenses")
 const BudgetCalc = () => {
   const [expenses, setExpenses] = useState(initialExpenses);
   const [incomes, setIncomes] = useState(initialIncomes);
-  const [type, setType] = useState("");
+  const [type, setType] = useState(false);
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
@@ -85,8 +85,9 @@ const BudgetCalc = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(type);
     console.log(category);
-    if (title !== "" && amount !== "") {
+    if (title !== "" && amount !== "" && type !== "" && category !== "") {
       if (type === "expense") {
         setExpenses([
           ...expenses,

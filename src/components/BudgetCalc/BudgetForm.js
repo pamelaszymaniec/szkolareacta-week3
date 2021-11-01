@@ -46,12 +46,13 @@ const BudgetForm = ({
           <input
             type="radio"
             className="form__radio-input"
-            id="small"
+            id="expense"
             name="type"
             value="expense"
+            checked={type === "expense"}
             onChange={handleType}
           />
-          <label htmlFor="small" className="form__radio-label">
+          <label htmlFor="expense" className="form__radio-label">
             Expense
           </label>
         </div>
@@ -60,12 +61,13 @@ const BudgetForm = ({
           <input
             type="radio"
             className="form__radio-input"
-            id="large"
+            id="income"
             name="type"
             value="income"
+            checked={type === "income"}
             onChange={handleType}
           />
-          <label htmlFor="large" className="form__radio-label">
+          <label htmlFor="income" className="form__radio-label">
             Income
           </label>
         </div>
@@ -105,7 +107,7 @@ const BudgetForm = ({
         <select
           id="category"
           name="category"
-          value="Salary"
+          value={category}
           className="form__input"
           onChange={handleCategory}
         >
