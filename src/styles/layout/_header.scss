@@ -1,0 +1,29 @@
+/**
+* @desc         header styles.
+* @requires     variables.scss, mixins.scss, 
+*/
+
+/* Menu - header */
+.menu {
+    display: block;
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        li {
+            a {
+                color: #60dafb;
+                text-decoration: none;
+                display: block;
+                padding: 10px 0;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+aside {
+    top: 0;
+    background-color: #212329;
+    color: #60dafb;
+    /* position: sticky; */
+}

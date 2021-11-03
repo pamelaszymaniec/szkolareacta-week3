@@ -1,64 +1,24 @@
-/* defalut */
+@import
+  'abstracts/variables';
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+@import
+  'base/reset',
+  'base/typography';
 
-html {
-    box-sizing: border-box;
-}
+ @import
+  'layout/header',
+  'layout/grid';
 
-h1, h2, h3 {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
+ @import
+ 'components/dialog';
 
-/* App styling */
 
-.App {
-  display: grid;
-  grid-template-columns: 200px repeat(12, 1fr);
-  min-height: 100vh;
-  background: #bdc3c7;
-}
-h3 {
-  color: #061A4E;
-  margin-left: 10px;
-}
-/* grid */
-.App aside, .App main {
-  padding: 20px;
-}
 
-.App main {
- grid-column: 2 / span 12;
-}
 
-/* Menu - header */
 
-.App aside {
-  top: 0;
-  background-color: #212329;
-  color: #60DAFB;
-  /* position: sticky; */
-}
 
-.Menu ul {
-  list-style-type: none;
-  padding-inline-start: 0;
-}
 
-.Menu ul li a {
-  color: #60DAFB!important;
-  text-decoration: none;
-  display: block;
-  padding: 10px 0;
-  font-weight: bold;
-}
+
 
 /* Week3 styles */
 
@@ -133,9 +93,7 @@ h3 {
   margin: 0;
 }
 
-.Menu {
-  display: block;
-}
+
 
 /* table reset */
 table, caption, tbody, tfoot, thead, tr, th, td {

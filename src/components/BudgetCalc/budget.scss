@@ -12,8 +12,6 @@ $color-grey-dark-2: #999;
 $color-white: #fff;
 $color-black: #000;
 
-
-
 //reset button
 .delete-icon,
 .button-reset {
@@ -25,7 +23,6 @@ $color-black: #000;
   cursor: pointer;
   outline: inherit;
 }
-
 
 .form {
   display: flex;
@@ -105,7 +102,9 @@ $color-black: #000;
     }
   }
   &__item {
-    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-left-width: 3px;
+    border-left-color: $color-black;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;

@@ -2,7 +2,7 @@ import MenuLink from "./MenuLink";
 
 function Menu() {
   return (
-    <nav className="Menu">
+    <nav className="menu">
       <ul>
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/about">About</MenuLink>

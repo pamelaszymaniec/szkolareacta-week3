@@ -1,4 +1,3 @@
-import "./dialog.scss";
 import DialogBox from "./DialogBox";
 import { useState } from "react";
 

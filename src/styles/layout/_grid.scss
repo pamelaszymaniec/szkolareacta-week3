@@ -1,0 +1,16 @@
+.app {
+    display: grid;
+    grid-template-columns: 200px repeat(12, 1fr);
+    min-height: 100vh;
+    background: #bdc3c7;
+}
+
+/* grid */
+.app aside,
+.app main {
+    padding: 20px;
+}
+
+.app main {
+    grid-column: 2 / span 12;
+}
