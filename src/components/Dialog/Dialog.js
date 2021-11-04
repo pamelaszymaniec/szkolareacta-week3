@@ -41,8 +41,6 @@ function Dialog() {
       </div>
       <DialogBox
         show={showDialog}
-        title="Tytuł"
-        description="Opis"
         close={handleCloseDialog}
         confirm={handleConfirmDialog}
         handleTitle={handleTitle}
