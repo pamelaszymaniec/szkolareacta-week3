@@ -1,16 +1,5 @@
-// COLORS
-$color-primary: #55c57a;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
 
-$color-white: #fff;
-$color-black: #000;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-
-$color-white: #fff;
-$color-black: #000;
+@import '../../styles/abstracts/variables';
 
 //reset button
 .delete-icon,
@@ -24,61 +13,7 @@ $color-black: #000;
   outline: inherit;
 }
 
-.form {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  &__group {
-    padding-right: 20px;
-    &--column {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 
-  &__input {
-    font-family: inherit;
-    color: inherit;
-    padding: 10px;
-    border-radius: 2px;
-    background-color: rgba($color-white, 0.5);
-    border: none;
-    border-bottom: 3px solid transparent;
-    display: block;
-    transition: all 0.3s;
-    &:focus {
-      outline: none;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 3px solid $color-primary;
-    }
-
-    &:focus:invalid {
-      border-bottom: 3px solid $color-secondary-dark;
-    }
-
-    &::-webkit-input-placeholder {
-      color: $color-grey-dark-2;
-    }
-  }
-
-  &__label {
-    font-size: 12px;
-    font-weight: 700;
-    margin-top: 0.7rem;
-    display: block;
-    transition: all 0.3s;
-  }
-
-  &__radio-group {
-    display: inline-block;
-  }
-
-  &__radio-label {
-    cursor: pointer;
-    position: relative;
-    margin-left: 10px;
-  }
-}
 
 .button {
   border: none;

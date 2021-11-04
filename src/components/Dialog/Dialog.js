@@ -2,26 +2,54 @@ import DialogBox from "./DialogBox";
 import { useState } from "react";
 
 function Dialog() {
-    const [showDialog, setShowDialog] = useState(false)
+  const [showDialog, setShowDialog] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
-    const handleShowDialog = () => {
-        setShowDialog(true);
-    }
+  const handleShowDialog = () => {
+    setShowDialog(true);
+  };
 
-    const handleCloseDialog = () => {
-        setShowDialog(false);
-    }
+  const handleCloseDialog = () => {
+    console.log('abort')
+    setShowDialog(false);
+  };
 
-    return (
-        <>
-            <div className="mt-10 text-center">
-                <button className="btn" onClick={handleShowDialog}>Show Dialog</button>
-            </div>
-            <DialogBox show={showDialog} title="Tytuł" description="Opis" close={handleCloseDialog} />
+  const handleConfirmDialog = () => {
+    console.log('confirm');
+    setShowDialog(false);
+  };
 
-        </>
 
-    );
+  const handleTitle = (e) => {
+      setTitle(e.target.value)
+  }
+  const handleDescription = (e) => {
+    setDescription(e.target.value)
+}
+  return (
+    <>
+      <h2>1. Okno dialogowe</h2>
+      <div>
+        <div>
+          <h4>Title: {title}</h4>
+          <p>Description: {description}</p>
+        </div>
+        <button className="btn" onClick={handleShowDialog}>
+          Edit
+        </button>
+      </div>
+      <DialogBox
+        show={showDialog}
+        title="Tytuł"
+        description="Opis"
+        close={handleCloseDialog}
+        confirm={handleConfirmDialog}
+        handleTitle={handleTitle}
+        handleDescription={handleDescription}
+      />
+    </>
+  );
 }
 
 export default Dialog;

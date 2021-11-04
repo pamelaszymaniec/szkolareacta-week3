@@ -3,7 +3,7 @@ import Dialog from "../components/Dialog/Dialog";
 function Week5() {
   return (
     <>
-   <p>week5</p>
+        <h1>Tydzień 4. Budowa Interfejsu</h1>
    <Dialog />
     </>
   );
