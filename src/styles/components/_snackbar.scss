@@ -1,11 +1,38 @@
 .snackbar {
-  background-color: $color-secondary-dark;
-  color: $color-secondary;
-  border: 1 px solid rgb(30, 73, 118);
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 20px;
-  border-radius: 5px;
   margin: 20px;
+  color: $color-secondary;
+  &--center-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &--top-right {
+    top: 0;
+    right: 0;
+    left: unset;
+  }
+  &__alert {
+    padding: 20px;
+    border: 1 px solid rgb(30, 73, 118);
+    background-color: $color-secondary-dark;
+    border-radius: 10px;
+    color: $color-white;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    &--error {
+      background-color: $color-error;
+    }
+    &--warning {
+      background-color: $color-warning;
+    }
+    &--info {
+      background-color: $color-info;
+    }
+    &--success {
+      background-color: $color-success;
+    }
+  }
 }

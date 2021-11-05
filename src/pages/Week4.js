@@ -3,6 +3,7 @@ import BillCalc from "../components/BillCalc/BillCalc";
 import { RefButton } from "../components/RefButton/RefButton";
 import ReactHookForm from "../components/ValidationForm/ReactHookForm";
 import ValidationForm from "../components/ValidationForm/ValidationForm";
+import { Link } from "react-router-dom";
 
 function Week4() {
   const ref = createRef();
@@ -19,7 +20,13 @@ function Week4() {
       <h2>3. Walidacja formularzy - React Hook Form</h2>
       <ReactHookForm />
       <h2>4. Kalkulator wydatków</h2>
-      <a href="/budgetcalc">tutaj</a>
+      <Link
+        to={{
+          pathname: "/budgetcalc",
+        }}
+      >
+        Tutaj
+      </Link>
       <h2>5. Zadanie 5 (button)</h2>
       <RefButton
         ref={ref}

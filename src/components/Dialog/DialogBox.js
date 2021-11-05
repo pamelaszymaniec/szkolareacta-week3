@@ -1,4 +1,12 @@
-function DialogBox({ show, title, description, close, confirm, handleDescription, handleTitle }) {
+function DialogBox({
+  show,
+  title,
+  description,
+  close,
+  confirm,
+  handleDescription,
+  handleTitle,
+}) {
   if (!show) {
     return <></>;
   }
@@ -33,13 +41,12 @@ function DialogBox({ show, title, description, close, confirm, handleDescription
           </div>
         </form>
         <div className="dialog__footer">
-          <button className="dialog__close" onClick={close}>
+          <button className="btn" onClick={close}>
             Abort
           </button>
-          <button className="dialog__close" onClick={confirm}>
+          <button className="btn btn--green m-l-10" onClick={confirm}>
             Confirm
           </button>
-          
         </div>
       </div>
     </div>

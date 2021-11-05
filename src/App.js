@@ -1,7 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+  Redirect,
+} from "react-router-dom";
 
-import Home from "./pages/Home";
 import Week3 from "./pages/Week3";
 import Week4 from "./pages/Week4";
 import Week5 from "./pages/Week5";
@@ -9,29 +14,50 @@ import BudgetCalc from "./pages/BudgetCalc";
 import Logo from "./components/Header/Logo";
 
 import "./styles/main.scss";
+import UserContainer from "./components/UsersContainer";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
+  const [isActive, setActive] = useState(true);
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
   return (
-    <div className="app">
+    <div className={`app ${isActive ? "" : "toggle-menu"}`}>
       <Router>
         <aside>
           <Logo />
           <nav className="menu">
             <ul>
               <li>
-                <Link to="/">Strona główna</Link>
+                <NavLink to="/home" activeClassName="selected">
+                  Strona główna
+                </NavLink>
               </li>
               <li>
-                <Link to="/week3">Tydzień 3</Link>
+                <NavLink to="/week3" activeClassName="selected">
+                  Tydzień 3
+                </NavLink>
               </li>
               <li>
-                <Link to="/week4">Tydzień 4</Link>
+                <NavLink to="/week4" activeClassName="selected">
+                  Tydzień 4
+                </NavLink>
               </li>
               <li>
-                <Link to="/budgetcalc">Kalkulator wydatków</Link>
+                <NavLink to="/budgetcalc" activeClassName="selected">
+                  Kalkulator wydatków
+                </NavLink>
               </li>
               <li>
-                <Link to="/week5">Tydzień 5</Link>
+                <NavLink to="/week5" activeClassName="selected">
+                  Tydzień 5
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/users" activeClassName="selected">
+                  Users
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -47,11 +73,14 @@ function App() {
             <Route path="/budgetcalc">
               <BudgetCalc />
             </Route>
-            <Route path="/week5">
-              <Week5 />
+            <Route path="/users">
+              <UserContainer />
             </Route>
-            <Route path="/">
-              <Home />
+            <Route path="/user-profile">
+              <UserProfile />
+            </Route>
+            <Route path={["/week5", "/"]}>
+              <Week5 active={isActive} handleToggle={handleToggle} />
             </Route>
           </Switch>
         </main>

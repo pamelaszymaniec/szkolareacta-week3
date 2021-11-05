@@ -1,0 +1,16 @@
+.btn {
+  padding: 12px;
+  font-weight: bold;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  &--green {
+    color: $color-white;
+    background-color: $color-success;
+  }
+  &--red {
+    color: $color-white;
+    background-color: $color-error;
+  }
+}

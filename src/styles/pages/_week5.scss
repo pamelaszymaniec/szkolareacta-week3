@@ -1,0 +1,28 @@
+.users {
+  &__list {
+    padding: 10px;
+    ul {
+      list-style: circle;
+    }
+  }
+}
+
+.user {
+  padding: 5px;
+  margin-left: 20px;
+  &:not(:last-child) {
+    margin-bottom: 2px;
+  }
+  &__link {
+    background-color: rgba(187, 239, 253, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    &:hover {
+      background-color: #bbeffd;
+      border-bottom-color: #1a1a1a;
+    }
+  }
+}
+
+.user-profile {
+  padding: 20px;
+}

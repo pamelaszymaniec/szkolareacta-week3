@@ -11,22 +11,21 @@ function Dialog() {
   };
 
   const handleCloseDialog = () => {
-    console.log('abort')
+    console.log("abort");
     setShowDialog(false);
   };
 
   const handleConfirmDialog = () => {
-    console.log('confirm');
+    console.log("confirm");
     setShowDialog(false);
   };
 
-
   const handleTitle = (e) => {
-      setTitle(e.target.value)
-  }
+    setTitle(e.target.value);
+  };
   const handleDescription = (e) => {
-    setDescription(e.target.value)
-}
+    setDescription(e.target.value);
+  };
   return (
     <>
       <h2>1. Okno dialogowe</h2>
@@ -35,7 +34,7 @@ function Dialog() {
           <h4>Title: {title}</h4>
           <p>Description: {description}</p>
         </div>
-        <button className="btn" onClick={handleShowDialog}>
+        <button className="btn m-t-10" onClick={handleShowDialog}>
           Edit
         </button>
       </div>

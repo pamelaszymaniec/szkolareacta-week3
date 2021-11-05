@@ -1,11 +1,16 @@
 import { useEffect } from "react";
+import Alert from "./Alert";
 
-function Snackbar({ autoHideDuration, handleClose }) {
+function Snackbar({ severity, position, autoHideDuration, handleClose }) {
   useEffect(() => {
     handleClose(autoHideDuration);
   });
 
-  return <div className="snackbar">It's me Snaaaaaackbar 🐍</div>;
+  return (
+    <div className={`snackbar snackbar--${position}`}>
+      <Alert severity={severity} />
+    </div>
+  );
 }
 
 export default Snackbar;

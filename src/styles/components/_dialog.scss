@@ -21,5 +21,9 @@
   max-width: 100%;
   width: 24rem;
   padding: 20px;
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
 }
 

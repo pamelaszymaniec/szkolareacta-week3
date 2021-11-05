@@ -1,5 +1,6 @@
 @import
-  'abstracts/variables';
+  'abstracts/variables',
+  'abstracts/mixins';
 
 @import
   'base/reset',
@@ -12,8 +13,11 @@
  @import
  'components/dialog',
  'components/snackbar',
- 'components/form';
+ 'components/form',
+ 'components/button';
 
+ @import
+ 'pages/week5';
 
 
 
