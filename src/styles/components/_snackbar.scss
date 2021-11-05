@@ -1,0 +1,11 @@
+.snackbar {
+  background-color: $color-secondary-dark;
+  color: $color-secondary;
+  border: 1 px solid rgb(30, 73, 118);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+}
