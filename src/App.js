@@ -14,10 +14,11 @@ import Logo from "./components/Header/Logo";
 import Home from "./pages/Home"
 import Week7 from "./pages/Week7";
 
-import "./styles/main.scss";
 import UserContainer from "./components/UsersContainer";
 import UserProfile from "./pages/UserProfile";
 import ApiUsersList from "./components/ApiUsersList/ApiUsersList";
+
+import "./styles/main.scss";
 
 function App() {
   const [isActive, setActive] = useState(true);

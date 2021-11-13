@@ -1,6 +1,6 @@
 @import
+  'abstracts/mixins',
   'abstracts/variables';
-
 @import
   'base/reset',
   'base/typography';
@@ -10,7 +10,10 @@
   'layout/grid';
 
  @import
- 'components/dialog';
+ 'components/dialog',
+ 'components/button',
+ 'components/form',
+ 'components/snackbar';
 
  @import
  'pages/week3',

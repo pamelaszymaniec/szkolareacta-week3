@@ -40,9 +40,8 @@ function ApiUsersList() {
     const userLoading = tmp.map(function (i) {
         return (
             <li key={i} className="user">{i + 1}. <span className="stage">
-            <div className="dot-flashing"></div>
-          </span></li>
-            
+                <div className="dot-flashing"></div>
+            </span></li>
         );
     });
 
