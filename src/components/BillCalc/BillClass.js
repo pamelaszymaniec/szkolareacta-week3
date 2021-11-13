@@ -34,7 +34,7 @@ class BillClass extends React.Component {
   };
 
   render() {
-    const { tips, defaultTip, selectedTip, amount,  bill, isSubmit } = this.state;
+    const { tips, selectedTip, amount,  bill, isSubmit } = this.state;
     return (
       <>
         {isSubmit ? (

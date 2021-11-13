@@ -1,6 +1,5 @@
 @import
-  'abstracts/variables',
-  'abstracts/mixins';
+  'abstracts/variables';
 
 @import
   'base/reset',
@@ -11,12 +10,11 @@
   'layout/grid';
 
  @import
- 'components/dialog',
- 'components/snackbar',
- 'components/form',
- 'components/button';
+ 'components/dialog';
 
  @import
+ 'pages/week3',
+ 'pages/week4',
  'pages/week5';
 
 
@@ -24,122 +22,3 @@
 
 
 
-
-/* Week3 styles */
-
-.Card {
-  max-width: 400px;
-  overflow: hidden;
-  background: #ecf0f1;
-  border-radius: 6px;
-}
-
-.Img {
-  max-height: 100%;
-  width: 100%;
-}
-
-.CardActions{
-  margin: 10px;
-  display: flex;
-}
-
-.Icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.Icon:hover {
-  background: #bdc3c7;
-}
-
-.Paragraph  {
-  padding: 5px 20px;
-}
-
-.Recipe {
-  padding: 20px;
-}
-
-.CardHeader {
-  display: flex;
-  margin: 15px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.Author {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #c53c2d;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.Title {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  margin: 0;
-  font-size: 16px;
-}
-
-.Date {
-  grid-column: 2/3;
-  margin: 0;
-}
-
-
-
-/* table reset */
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.Employees {
-  table-layout: fixed;
-  width: 100%;
-}
-table {
-  border-collapse: collapse;
-}
- th {
-  background: #ccc;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background: #efefef;
-}
-
-tr:hover {
-  background: #d1d1d1;
-}
-
-.error {
-  font-size: 13px;
-  color: #f00;
-  display: block;
-}
